@@ -1,9 +1,6 @@
-<head>
-    <title>Учи-мучи гачимучи</title>
-</head>
-
-<body leftmargin="50" rightmargin="50" topmargin="20" bottommargin="50">
-<font size="+1" face="serif">
+<?php
+require("header.php");
+?>
 
 <h2>Немного основ синтаксиса</h2>
 <p>
@@ -50,7 +47,7 @@
         $a_bool = true;
         $b_int  = [
             [
-                "Name"  => "Rina",
+                "Name"  => "Sny",
                 "email" => "aboba@gmogus.sus",
                 "bobux" => 420
             ]
@@ -65,7 +62,7 @@
         elseif (is_int($b_int))
             echo "Это число";
         else
-            echo "Не знамо шо це, вывожу данные:" . PHP_EOL;
+            echo "Не знаю что это, вывожу данные:" . PHP_EOL;
             echo var_dump($b_int) . PHP_EOL;
         echo PHP_EOL;
 
@@ -97,16 +94,14 @@
 
     Все остальные значения рассматриваются как <font color="green">true</font>.
     <b><pre>ПРИМ:</pre></b>
-    <pre>
-        <?php
-            $a = "0";
-            echo "\rТип элемента \"0\"(с кавычками) = " . gettype($a) . ". При переводе в boolean, значение равно ";
-            settype($a, "boolean");
+    <?php
+        $a = "0";
+        echo "\rТип элемента \"0\"(с кавычками) = " . gettype($a) . ". При переводе в boolean, значение равно ";
+        settype($a, "boolean");
 
-            if ($a) echo "YES";
-            else echo "Ложь. Что забавно, значение переменной не выводится";
-        ?>
-    </pre>
+        if ($a) echo "YES";
+        else echo "Ложь. Что забавно, значение переменной не выводится";
+    ?>
 </p>
 
 <hr>
@@ -225,7 +220,7 @@
     Строковый тип реализован в виде массива байт и целого числа, обозначающую длину буфера.<br>
 
     <a href="https://www.php.net/manual/ru/language.types.string.php#language.types.string.details">
-        <img src="../images/see_here.jpg" border="2" vspace="2">
+        Сюда
     </a> <br>
 
     Строки кодируются в той же кодировке, что и сам файл. То есть, если файл кодируется UTF-8, то и строки будут UTF-8.<br>
@@ -681,5 +676,6 @@
     Некоторые функции... Я пока-что не понимаю, что это.
 </p>
 -->
-<button><a href="02.php">Next Lvl</a></button>
-</body>
+<?php
+require("footer.php")
+?>
